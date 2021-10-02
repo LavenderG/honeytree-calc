@@ -1,12 +1,12 @@
 [package]
-name = "gsc_timereset"
-version = "0.1.0"
+name = "honeytree-calc"
+version = "1.0.0"
 edition = "2018"
-description = "GSC time reset password calculator"
+description = "DPPt Munchlax Honey Tree Calculator"
 readme = "README.md"
-repository = "https://github.com/ignacio-ts/randtoken"
+repository = "https://github.com/LavenderG/honeytree-calc"
 license = "GPL-3.0"
-keywords = ["videogame", "calculator", "mons", "gsc"]
+keywords = ["videogame", "calculator", "honey", "dppt", "munchlax"]
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
