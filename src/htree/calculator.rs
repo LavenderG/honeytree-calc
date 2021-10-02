@@ -10,6 +10,7 @@ use super::tree::HONEY_TREES;
 ///
 /// # Examples
 /// ```
+/// use honeytree_calc::htree::calculator::calculate_honey_trees;
 /// calculate_honey_trees(12345, 54321).into_iter().for_each(|tree| println!("{}", tree.location));
 /// ```
 pub fn calculate_honey_trees(trainer_id: u16, secret_id: u16) -> HoneyTreeResult<'static> {
