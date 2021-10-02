@@ -58,3 +58,22 @@ impl TrainerData {
         calculator::calculate_honey_trees(self.trainer_id, self.secret_id)
     }
 }
+
+#[test]
+
+fn test_trainer_data() {
+    use super::tree::HONEY_TREES;
+    const EXPECTED_TREES: HoneyTreeResult = HoneyTreeResult {
+        tree1: &HONEY_TREES[3],
+        tree2: &HONEY_TREES[4],
+        tree3: &HONEY_TREES[1],
+        tree4: &HONEY_TREES[0],
+    };
+    let my_data = TrainerData::new(1, 65535);
+    let trees = my_data.get_honey_trees();
+
+    assert_eq!(EXPECTED_TREES.tree1.location, trees.tree1.location);
+    assert_eq!(EXPECTED_TREES.tree2.location, trees.tree2.location);
+    assert_eq!(EXPECTED_TREES.tree3.location, trees.tree3.location);
+    assert_eq!(EXPECTED_TREES.tree4.location, trees.tree4.location);
+}

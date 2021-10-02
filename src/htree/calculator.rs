@@ -68,3 +68,20 @@ fn reset_if_overflows(val: &mut u16) {
         *val = 0;
     }
 }
+
+#[test]
+fn test_calc_trees() {
+    const EXPECTED_TREES: HoneyTreeResult = HoneyTreeResult {
+        tree1: &HONEY_TREES[7],
+        tree2: &HONEY_TREES[2],
+        tree3: &HONEY_TREES[15],
+        tree4: &HONEY_TREES[6],
+    };
+
+    let trees = calculate_honey_trees(12345, 54321);
+
+    assert_eq!(EXPECTED_TREES.tree1.location, trees.tree1.location);
+    assert_eq!(EXPECTED_TREES.tree2.location, trees.tree2.location);
+    assert_eq!(EXPECTED_TREES.tree3.location, trees.tree3.location);
+    assert_eq!(EXPECTED_TREES.tree4.location, trees.tree4.location);
+}
