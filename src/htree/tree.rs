@@ -77,8 +77,9 @@ pub const HONEY_TREES: [HoneyTree; 21] = [
 ///
 /// # Examples
 /// ```
+/// use honeytree_calc::htree::tree::HoneyTree;
 /// let my_tree = HoneyTree {location: "Route 201"};
-/// println!(my_tree.location);
+/// println!("{}", my_tree.location);
 /// ```
 pub struct HoneyTree<'a> {
     pub location: &'a str,

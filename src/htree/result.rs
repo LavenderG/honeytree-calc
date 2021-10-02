@@ -49,7 +49,8 @@ impl TrainerData {
     ///
     /// # Examples
     /// ```
-    /// let my_data = TrainerData{ trainer_id: 12345, secret_id: 54321 };
+    /// use honeytree_calc::htree::result::TrainerData;
+    /// let my_data = TrainerData::new(12345, 54321);
     /// my_data.get_honey_trees().into_iter().for_each(|tree| println!("{}", tree.location));
     /// ```
     ///
