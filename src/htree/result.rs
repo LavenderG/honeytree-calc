@@ -21,7 +21,7 @@ impl<'a> IntoIterator for HoneyTreeResult<'a> {
     type IntoIter = std::array::IntoIter<&'a HoneyTree<'a>, 4>;
 
     fn into_iter(self) -> Self::IntoIter {
-        std::array::IntoIter::new([self.tree1, self.tree2, self.tree3, self.tree4])
+        IntoIterator::into_iter([self.tree1, self.tree2, self.tree3, self.tree4])
     }
 }
 
