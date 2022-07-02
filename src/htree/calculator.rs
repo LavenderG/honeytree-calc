@@ -26,33 +26,27 @@ pub fn calculate_honey_trees(trainer_id: u16, secret_id: u16) -> HoneyTreeResult
     let mut d = tid2 % 21;
 
     if a == b {
-        b += 1;
-        reset_if_overflows(&mut b);
+        b = (b + 1) % 20;
     }
 
     if a == c {
-        c += 1;
-        reset_if_overflows(&mut c);
+        c = (c + 1) % 20;
     }
 
     if b == c {
-        c += 1;
-        reset_if_overflows(&mut c);
+        c = (c + 1) % 20;
     }
 
     if a == d {
-        d += 1;
-        reset_if_overflows(&mut d);
+        d = (d + 1) % 20;
     }
 
     if b == d {
-        d += 1;
-        reset_if_overflows(&mut d);
+        d = (d + 1) % 20;
     }
 
     if c == d {
-        d += 1;
-        reset_if_overflows(&mut d);
+        d = (d + 1) % 20;
     }
 
     HoneyTreeResult {
@@ -60,12 +54,6 @@ pub fn calculate_honey_trees(trainer_id: u16, secret_id: u16) -> HoneyTreeResult
         tree2: &HONEY_TREES[b as usize],
         tree3: &HONEY_TREES[c as usize],
         tree4: &HONEY_TREES[d as usize],
-    }
-}
-
-fn reset_if_overflows(val: &mut u16) {
-    if *val == 21 {
-        *val = 0;
     }
 }
 
